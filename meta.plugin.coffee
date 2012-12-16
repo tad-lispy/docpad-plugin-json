@@ -1,4 +1,13 @@
 module.exports = (BasePlugin) ->
-  class Coffee2JSON extends BasePlugin
-    name: "coffee2JSON"
+  class Meta extends BasePlugin
+    name: "meta"
+    serverExtend: (options) ->
+      __ = require "underscore.string"
+      {server} = options
+
+      server.get "*", (request, response, next) ->
+        if request.path.match(/\.(\w+)$/)[1] is "json"
+          response.send "It's JSON!"
+        else next()
+        
     
