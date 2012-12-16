@@ -2,12 +2,20 @@ module.exports = (BasePlugin) ->
   class Meta extends BasePlugin
     name: "meta"
     serverExtend: (options) ->
-      __ = require "underscore.string"
       {server} = options
+      docpad = @docpad
 
       server.get "*", (request, response, next) ->
-        if request.path.match(/\.(\w+)$/)[1] is "json"
-          response.send "It's JSON!"
+        return next() unless request.accepts(["html", "json"]) is "json"
+        
+        if not docpad.filesByUrl[request.path] 
+          response.status 404
+          response.end()
+          return
+      
+        document = docpad.getFileByUrl(request.path)
+        response.send JSON.stringify document.meta.attributes
+
         else next()
         
     
