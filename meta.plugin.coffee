@@ -14,6 +14,6 @@ module.exports = (BasePlugin) ->
           return
         
         document = docpad.getFileByUrl(request.path)
-        response.send JSON.stringify document.meta.attributes
+        response.json document.meta.attributes
         
     
