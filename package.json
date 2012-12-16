@@ -1,0 +1,30 @@
+{
+  "name": "docpad-plugin-meta",
+  "version": "0.1.1",
+  "description": "Get document's meta data as JSON.",
+  "homepage": "",
+  "keywords": [
+    "docpad",
+    "docpad-plugin",
+    "input",
+    "save",
+    "content",
+    "dynamic"
+  ],
+  "author": "Tadeusz Łazurski <wydawnictwo@lazurski.pl> (http://lazurski.pl/)",
+  "maintainers": [],
+  "contributors": [],
+  "bugs": {
+    "url": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.4.0",
+    "docpad": ">=6.0"
+  },
+  "dependencies": {},
+  "main": "./meta.plugin.coffee"
+}
