@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-meta",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Get document's meta data as JSON.",
   "homepage": "",
   "keywords": [
