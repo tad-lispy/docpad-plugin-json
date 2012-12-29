@@ -1,6 +1,6 @@
 module.exports = (BasePlugin) ->
   class Meta extends BasePlugin
-    name: "meta"
+    name: "json"
     serverExtend: (options) ->
       {server} = options
       docpad = @docpad
