@@ -1,6 +1,6 @@
 {
   "name": "docpad-plugin-json",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Get document's content and meta as JSON.",
   "homepage": "https://github.com/lzrski/docpad-plugin-json",
   "keywords": [
