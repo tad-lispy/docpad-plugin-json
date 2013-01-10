@@ -21,4 +21,4 @@ You should get:
     }
     ```
 
-[1] https://docpad.org/
+[1]: https://docpad.org/ "DocPad - a next generation web framework"
