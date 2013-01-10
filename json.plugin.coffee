@@ -22,7 +22,7 @@ module.exports = (BasePlugin) ->
 
         response.json documents: list
 
-      # Get metadata
+      # Get single document
       server.get "*", (request, response, next) ->
         return next() unless request.accepts(["html", "json"]) is "json"
         
@@ -32,7 +32,8 @@ module.exports = (BasePlugin) ->
           return
         
         document = docpad.getFileByUrl(request.path)
-        response.json document.meta.attributes
-      
-
-    
+        console.dir document
+        result =
+          meta: document.meta.attributes
+          content: document.attributes.content
+        response.json result
